@@ -1,0 +1,32 @@
+// creating reusable media-queries breakpoints
+
+$breakpoints: (
+    "mobile": 0,
+    "tablet": 480px,
+    "laptop": 720px,
+    "desktop": 1200px,
+);
+
+@mixin mobile {
+    @media (min-width: map-get($breakpoints, "mobile")) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: map-get($breakpoints, "tablet")) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: map-get($breakpoints, "laptop")) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: map-get($breakpoints, "desktop")) {
+        @content;
+    }
+}

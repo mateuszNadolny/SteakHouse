@@ -1,0 +1,22 @@
+// colors 
+$primary-white: rgba(255, 255, 255, 1);
+$primary-black: rgba(0, 0, 0, 1);
+$secondary-red: rgba(146, 3, 3, 1);
+
+
+// shadow
+$base-box-shadow: 0px 1px 21px rgba(0, 0, 0, 0.0520088);
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// border
+$base-border-radius: 10px;
+
+// font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
