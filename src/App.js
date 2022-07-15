@@ -1,10 +1,11 @@
 import './global_styles/index.css'
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      <p>test</p>
-    </div>
+    <>
+      <Navbar />
+    </>
   ); 
 }
 
