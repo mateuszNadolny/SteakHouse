@@ -20,23 +20,23 @@ const Navbar = () => {
     }
 
     return ( 
-        <header className={`col-12-mobile col-12-desktop`}>
-            <nav ref={navbarRef} className="row col-12-mobile col-12-desktop">
-            {/* <button onClick={toggleNavbarHandler}>
+        <header className={`row col-12-mobile col-12-desktop col-12-laptop`}>
+            <div className={`${styles["logo-wrapper"]} row col-1-desktop col-1-laptop col-1-mobile`}>
+                <img src={restaurantLogo} alt="logo" className={styles["logo"]}/>
+            </div>
+            <nav ref={navbarRef} className="row col-12-mobile col-11-desktop col-11-laptop">
+            <button onClick={toggleNavbarHandler} className={styles["close-icon"]}>
                 <img src={closeIcon} alt="close-icon"/>
-            </button> */}
-                <div className={`${styles["logo-wrapper"]} row col-2-desktop`}>
-                    <img src={restaurantLogo} alt="logo" className={styles["logo"]}/>
-                </div>
-                <ul className={`${styles["ul-left"]} row col-7-desktop`}>
+            </button>
+                <ul className={`${styles["ul-left"]} row col-8-desktop col-12-mobile`}>
                     <li className={styles["clickable"]}><a href="#">Steaks</a></li>
                     <li className={styles["clickable"]}><a href="#">Burgers</a></li>
                     <li className={styles["clickable"]}><a href="#">French Fries</a></li>
                     <li className={styles["clickable"]}><a href="#">Drinks</a></li>
-                    <li className={styles["clickable"]}><a href="#">Gdzie dowozimy</a></li>
+                    <li className={styles["clickable"]}><a href="#">Gdzie dowozimy?</a></li>
                     <li className={styles["clickable"]}><a href="#">Kontakt</a></li>
                 </ul>
-                <ul className={`${styles["ul-right"]} row col-3-desktop`}>
+                <ul className={`${styles["ul-right"]} row col-4-desktop col-12-mobile`}>
                         <li className={styles["clickable"]}>
                             <div className={`${styles["ul-right-el-wrapper"]} row`}>
                                 <img src={accountIcon} alt="account icon" />
@@ -56,10 +56,10 @@ const Navbar = () => {
                             </div>
                         </li>
                 </ul>
-                {/* <button onClick={toggleNavbarHandler}>
-                    <img src={menuIcon} alt="menu icon"/>
-                </button> */}
-                </nav>
+            </nav>
+            <button onClick={toggleNavbarHandler} className={styles["menu-hamburger-icon"]}>
+                <img src={menuIcon} alt="menu icon"/>
+            </button>
         </header>
     );
 }

@@ -40,16 +40,6 @@ $grid-gaps: (
     }
 }
 
-@include tablet {
-    @for $i from 1 through $grid-columns {
-        .col-#{$i}-tablet {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: calc(($i * 100%) / $grid-columns);
-        }
-    }
-}
-
 @include laptop {
     @for $i from 1 through $grid-columns {
         .col-#{$i}-laptop {

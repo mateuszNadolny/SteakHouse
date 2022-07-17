@@ -2,14 +2,23 @@
 @import './../../global_styles/index.css';
 
 header {
-    transition: transform .3s ease-in;
+    box-shadow: $base-box-shadow;
     font-size: $header-font-size;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 nav {
-    box-shadow: $base-box-shadow;
+    justify-content: space-around;
     align-items: center;
-    position: d;
+    top: 0;
+    left: 0;
+    transition: 1s ease-out;
+}
+
+.close-icon, .menu-hamburger-icon {
+    display: none;
 }
 
 img {
@@ -18,11 +27,11 @@ img {
 
 .logo-wrapper {
     justify-content: center;
+    align-items: center;
 }
 
 .logo {
-    width: 40px;
-    
+    width: 50px;
 }
 
 .ul-left, .ul-right {
@@ -30,7 +39,12 @@ img {
     padding: .3rem;
 }
 
+.ul-left {
+    padding-left: 5rem;
+}
+
 .ul-right {
+    justify-content: center;
     align-items: center;
 }
 
@@ -47,22 +61,78 @@ img {
     padding: .6rem 1.2rem;
 }
 
-
-
-
-
-
-
-
-
-.clickable {
-    &:hover {
-        opacity: 0.6;
-    }
+.clickable-btn {
     &:active {
-        transform: scale(103%);
+        transform: scale(105%);
     }
 }
 
+.clickable {
+    @extend .clickable-btn;
+    &:hover {
+        opacity: 0.6;
+    }
+}
 
+.nav-toggle {
+    transform: translateY(0);
+}
+
+
+
+@include laptop {
+    header {
+        font-size: 12px;
+    }
+    .logo {
+        width: 40px;
+    }
+
+    .ul-left, .ul-right {
+        gap: 2rem;
+        padding-left: 0;
+        padding: 0.3rem;
+    }
+}
+
+@include mobile {
+    .logo-wrapper {
+        justify-content: flex-start;
+    }
+    .logo {
+        width: 30px;
+        padding: 5px 10px;
+    }
+    nav {
+        transform: translateY(-250%);
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background: $primary-white;
+        opacity: 0.9;
+        z-index: 5;
+    }
+    .close-icon, .menu-hamburger-icon {
+        display: flex;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    .menu-hamburger-icon {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px
+    }
+     
+    .ul-left {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .ul-right {
+        padding: 0;
+    }
+}
 
