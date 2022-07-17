@@ -24,7 +24,7 @@ const Navbar = () => {
             <div className={`${styles["logo-wrapper"]} row col-1-desktop col-1-laptop col-1-mobile`}>
                 <img src={restaurantLogo} alt="logo" className={styles["logo"]}/>
             </div>
-            <nav ref={navbarRef} className="row col-12-mobile col-11-desktop col-11-laptop">
+            <nav ref={navbarRef} className={`row col-12-mobile col-11-desktop col-11-laptop`}>
             <button onClick={toggleNavbarHandler} className={styles["close-icon"]}>
                 <img src={closeIcon} alt="close-icon"/>
             </button>

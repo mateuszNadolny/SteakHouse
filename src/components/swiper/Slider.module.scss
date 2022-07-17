@@ -1,0 +1,10 @@
+@import './../../global_styles/index.scss';
+
+.slider-wrapper {
+    z-index: -999;
+    display: flex;
+}
+
+.slider-image {
+    width: 100%;
+}

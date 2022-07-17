@@ -233,10 +233,10 @@ nav {
   align-items: center;
   top: 0;
   left: 0;
-  transition: 0.3s ease-in;
+  transition: 1s ease-out;
 }
 
-.close-icon {
+.close-icon, .menu-hamburger-icon {
   display: none;
 }
 
@@ -321,12 +321,18 @@ img {
     position: absolute;
     background: rgb(255, 255, 255);
     opacity: 0.9;
+    z-index: 5;
   }
-  .close-icon {
-    display: block;
+  .close-icon, .menu-hamburger-icon {
+    display: flex;
     position: absolute;
     top: 5px;
     right: 5px;
+  }
+  .menu-hamburger-icon {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
   }
   .ul-left {
     flex-direction: column;
