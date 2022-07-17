@@ -1,104 +1,68 @@
 @import './../../global_styles/index.scss';
 @import './../../global_styles/index.css';
 
-.header {
-    background-color: $primary-white;
-    box-shadow: $base-box-shadow; 
-    padding: $base-padding;
-    width: 100%;
+header {
+    transition: transform .3s ease-in;
+    font-size: $header-font-size;
 }
 
-.logo-icon {
-    width: 40px;
+nav {
+    box-shadow: $base-box-shadow;
+    align-items: center;
+    position: d;
 }
 
-.nav {
-    transform: translateY(-200%);
-    position: absolute;
-    background-color: $primary-white;
-    opacity: 0.9;
-    top: 0;
-    left: 0; 
-    margin: 0 auto; 
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    text-align: center;
-    transition: transform .4s ease-in-out;
-    .navbar-elements {
-        flex-direction: column;
-        width: 100%;
-        max-width: 400px;
-        .menu-close-icon {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 20px;
-        }
-        li {
-            margin: 2rem;
-        }
-        .navbar-left-elements {
-            margin: 0 auto;
-            border-top: 1px solid $primary-black;
-            border-bottom: 1px solid $primary-black;
-            
-        }
-        .navbar-right-elements {
-            margin-top: 5rem;
-            .order-wrapper {
-                background-color: $secondary-red;
-                width: 75px;
-                border-radius: $base-border-radius;
-                color: $primary-white;
-            }
-        }
-    }
-    @include tablet {
-        transform: translateY(0);
-        opacity: 100;
-        background: none;
-        position: block;
-        .navbar-elements {
-            flex-direction: row;
-            background: none;
-            max-width: none;
-        }
-        .navbar-left-elements {
-            border-bottom: 0px;
-            margin: 0;
-            flex-direction: row;
-        }
-    }
-}
-
-.nav-toggle {
-    transform: translateY(0);
-}
-
-.menu-hamburger-icon, .menu-close-icon {
+img {
     width: 20px;
-    @include tablet {
-        display: none;
-    }
 }
 
-.clickable-btn {
-    cursor: pointer;
-    transition: .2s ease-out;
-    &:active {
-        transform: scale(1.1);        
-    };
+.logo-wrapper {
+    justify-content: center;
 }
+
+.logo {
+    width: 40px;
+    
+}
+
+.ul-left, .ul-right {
+    gap: 3rem;
+    padding: .3rem;
+}
+
+.ul-right {
+    align-items: center;
+}
+
+.ul-right-el-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-right-el-wrapper-order {
+    background-color: $secondary-red;
+    color: $primary-white;
+    border-radius: $base-border-radius;
+    padding: .6rem 1.2rem;
+}
+
+
+
+
+
+
+
+
 
 .clickable {
-    @extend .clickable-btn;
     &:hover {
-        opacity: 0.5;
+        opacity: 0.6;
+    }
+    &:active {
+        transform: scale(103%);
     }
 }
-
-
 
 
 

@@ -8,6 +8,7 @@
 // $i means how much from the 12 columns space the element should occupy
 // screen-size states on what type of screen size should the element take the grid columns
 
+
 $grid-columns: 12;
 
 $grid-gaps: (
@@ -17,31 +18,16 @@ $grid-gaps: (
   "3": 30px,
 );
 
-$layout-values: flex-start, flex-end, center, space-between, space-around;
-
 // base layout classes
+.container {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
 
 .row {
     display: flex;
     flex-flow: row wrap;
-}
-
-// grid gaps
-@each $key, $val in $grid-gaps {
-    .gap-#{$key} > * {
-      padding: $val;
-    }
-    .gap-#{$key} {
-      margin-left: -$val;
-      margin-right: -$val;
-    }
-  }
-  
-  // justify content classes
-@each $val in $layout-values {
-    .justify-#{$val} {
-      justify-content: $val;
-    }
 }
 
 @include mobile {
@@ -49,7 +35,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
         .col-#{$i}-mobile {
             box-sizing: border-box;
             flex-grow: 0;
-            width: $i * 100% / $grid-columns;
+            width: calc(($i * 100%) / $grid-columns);
         }
     }
 }
@@ -59,7 +45,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
         .col-#{$i}-tablet {
             box-sizing: border-box;
             flex-grow: 0;
-            width: $i * 100% / $grid-columns;
+            width: calc(($i * 100%) / $grid-columns);
         }
     }
 }
@@ -69,7 +55,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
         .col-#{$i}-laptop {
             box-sizing: border-box;
             flex-grow: 0;
-            width: $i * 100% / $grid-columns;
+            width: calc(($i * 100%) / $grid-columns);
         }
     }
 }
@@ -79,7 +65,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
         .col-#{$i}-desktop {
             box-sizing: border-box;
             flex-grow: 0;
-            width: $i * 100% / $grid-columns;
+            width: calc(($i * 100%) / $grid-columns);
         }
     }
 }

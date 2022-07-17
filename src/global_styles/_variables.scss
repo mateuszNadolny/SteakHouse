@@ -20,11 +20,7 @@ $base-margin: 0.75rem;
 $base-border-radius: 10px;
 
 // font sizes
-$base-font-size: 1rem;
-$font-size-sm: $base-font-size * 0.75;
-$font-size-lg: $base-font-size * 1.5;
-$font-size-xl: $base-font-size * 2;
-$font-size-xxl: $base-font-size * 3;
-
-// display
-$display-none: none;
+$header-font-size: 14px;
+$heading-one-size: $header-font-size * 4;
+$desc-paragraph-size: $header-font-size * 1.4;
+$heading-two-size: $header-font-size * 2.5;

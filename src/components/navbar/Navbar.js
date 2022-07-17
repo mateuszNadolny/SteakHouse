@@ -19,45 +19,47 @@ const Navbar = () => {
         navbarRef.current.classList.toggle(styles["nav-toggle"])
     }
 
-    
-
     return ( 
-        <header className={`${styles["header"]} container row justify-space-between`}>
-            <img src={restaurantLogo} alt="logo" className={styles["logo-icon"]}/>
-            <nav ref={navbarRef} className={`${styles["nav"]} row justify-center`}>
-                <div className={`${styles["navbar-elements"]} justify-center row`}>
-                    <div className={styles["navbar-left-elements"]}>
-                        <button onClick={toggleNavbarHandler}>
-                            <img src={closeIcon} alt="close-icon" className={`${styles["menu-close-icon"]} ${styles["clickable-btn"]}`}/>
-                        </button>
-                        <ul>
-                            <li className={styles["clickable"]}>Steaks</li>
-                            <li className={styles["clickable"]}>Burgers</li>
-                            <li className={styles["clickable"]}>French Fries</li>
-                            <li className={styles["clickable"]}>Drinks</li>
-                            <li className={styles["clickable"]}>Gdzie dowozimy?</li>
-                            <li className={styles["clickable"]}>Kontakt</li>
-                        </ul>
-                    </div>
-                    <div className={`${styles["navbar-right-elements"]} row justify-space-around`}>
-                        <div className={`${styles["account-wrapper"]} ${styles["clickable"]}`}>
-                            <img src={accountIcon} alt="account-icon"/>
-                            <p>Moje konto</p>
-                        </div> 
-                        <div className={`${styles["cart-wrapper"]} ${styles["clickable"]}`}>
-                            <img src={cartIcon} alt="cart-icon"/>
-                            <p>Koszyk</p>
-                        </div> 
-                        <div className={`${styles["order-wrapper"]} ${styles["clickable"]}`}>
-                            <img src={orderIcon} alt="order-icon"/>
-                            <p>Zamów</p>
-                        </div> 
-                    </div>
+        <header className={`col-12-mobile col-12-desktop`}>
+            <nav ref={navbarRef} className="row col-12-mobile col-12-desktop">
+            {/* <button onClick={toggleNavbarHandler}>
+                <img src={closeIcon} alt="close-icon"/>
+            </button> */}
+                <div className={`${styles["logo-wrapper"]} row col-2-desktop`}>
+                    <img src={restaurantLogo} alt="logo" className={styles["logo"]}/>
                 </div>
-            </nav>
-            <button className={`${styles["nav-btn-open"]} ${styles["clickable-btn"]}`} onClick={toggleNavbarHandler}>
-                <img src={menuIcon} alt="menu icon" className={styles["menu-hamburger-icon"]}/>
-            </button>
+                <ul className={`${styles["ul-left"]} row col-7-desktop`}>
+                    <li className={styles["clickable"]}><a href="#">Steaks</a></li>
+                    <li className={styles["clickable"]}><a href="#">Burgers</a></li>
+                    <li className={styles["clickable"]}><a href="#">French Fries</a></li>
+                    <li className={styles["clickable"]}><a href="#">Drinks</a></li>
+                    <li className={styles["clickable"]}><a href="#">Gdzie dowozimy</a></li>
+                    <li className={styles["clickable"]}><a href="#">Kontakt</a></li>
+                </ul>
+                <ul className={`${styles["ul-right"]} row col-3-desktop`}>
+                        <li className={styles["clickable"]}>
+                            <div className={`${styles["ul-right-el-wrapper"]} row`}>
+                                <img src={accountIcon} alt="account icon" />
+                                <a href="#">Moje konto</a>
+                            </div>
+                        </li>
+                        <li className={styles["clickable"]}>
+                            <div className={`${styles["ul-right-el-wrapper"]} row`}>
+                                <img src={cartIcon} alt="cart icon" />
+                                <a href="#">Koszyk</a>
+                            </div>
+                        </li>
+                        <li className={styles["clickable"]}>
+                            <div className={`${styles["ul-right-el-wrapper"]} ${styles["ul-right-el-wrapper-order"]} row`}>
+                                <img src={orderIcon} alt="order icon" />
+                                <a href="#">Zamów</a>
+                            </div>
+                        </li>
+                </ul>
+                {/* <button onClick={toggleNavbarHandler}>
+                    <img src={menuIcon} alt="menu icon"/>
+                </button> */}
+                </nav>
         </header>
     );
 }
