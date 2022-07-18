@@ -5,10 +5,6 @@ import Slide from './Slide';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 import 'swiper/scss/autoplay';
-import "./../../global_styles/index.css";
-import styles from './Swiper.module.scss';
-
-
 
 export default () => {
     return (

@@ -1,12 +1,11 @@
-import './global_styles/index.css'
 import Navbar from './components/navbar/Navbar';
-import Slider from './components/swiper/Slider';
+import Swiper from './components/swiper/Swiper';
 
 function App() {
   return (
     <>
       <Navbar />
-      <Slider />
+      <Swiper />
     </>
   ); 
 }

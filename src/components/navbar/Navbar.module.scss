@@ -6,6 +6,7 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+    background-color: $primary-white;
 }
 
 nav {
@@ -109,7 +110,7 @@ img {
         height: 100vh;
         position: absolute;
         background: $primary-white;
-        opacity: 0.9;
+        opacity: 0.96;
         z-index: 5;
     }
     .close-icon, .menu-hamburger-icon {
