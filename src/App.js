@@ -1,11 +1,17 @@
 import Navbar from './components/navbar/Navbar';
-import Swiper from './components/swiper/Swiper';
+import SimpleSwiper from './components/swiper/Swiper';
 
 function App() {
   return (
     <>
       <Navbar />
-      <Swiper />
+      <SimpleSwiper />
+      <SimpleSwiper />
+      <SimpleSwiper />
+      <SimpleSwiper />
+      <SimpleSwiper />
+      <SimpleSwiper />
+      <SimpleSwiper />
     </>
   ); 
 }

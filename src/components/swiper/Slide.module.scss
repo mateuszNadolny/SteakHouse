@@ -4,13 +4,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 1rem;
 }
 
 .slide-heading {
-    font-size: $heading-one-size;
-    inline-size: 640px;
+    font-size: calc(0.025 * 100vw);
+    inline-size: 40rem;
     overflow-wrap: break-word;
-    margin-bottom: 2rem;
+    margin-bottom: calc(0.02 * 100vh);
 }
 
 .slide-heading-span {
@@ -19,10 +20,10 @@
 }
 
 .slide-paragraph {
-    font-size: $desc-paragraph-size;
-    inline-size: 450px; 
+    font-size: calc(0.01 * 100vw);
+    inline-size: 28.125rem; 
     overflow-wrap: break-word;
-    margin-bottom: 2rem;
+    margin-bottom: calc(0.02 * 100vh);
 }
 
 .slide-btn {
@@ -48,4 +49,51 @@
 }
 
 
+@include laptop {
+    .slide-heading {
+        inline-size: 20rem;
+    }
+    .slide-paragraph {
+        inline-size: 17rem;
 
+    }
+    .slide-btn {
+        font-size: $header-font-size * 0.7;
+        padding: .5rem 1rem;
+    }
+}
+
+@include mobile {
+    .slide-content-wrapper {
+        position: relative;
+        margin-top: 1rem;
+        padding: 1rem;
+    }
+
+    .slide-content-wrapper-text {
+        backdrop-filter: blur(2px);
+        z-index: 1;
+    }
+
+    .slide-heading {
+        font-size: calc(0.03 * 100vw);
+        margin-top: .45rem;
+        inline-size: 20rem;
+    }
+    .slide-paragraph {
+        font-size: calc(0.02 * 100vw);
+        inline-size: 17rem;
+    }
+    .slide-btn {
+        font-size: calc(0.016 * 100vw);
+        padding: .25rem .5rem;
+    }
+
+    .slide-img {
+        position: absolute;
+        opacity: 0.4;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}

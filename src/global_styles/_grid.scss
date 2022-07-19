@@ -8,21 +8,13 @@
 // $i means how much from the 12 columns space the element should occupy
 // screen-size states on what type of screen size should the element take the grid columns
 
-
 $grid-columns: 12;
-
-$grid-gaps: (
-  "0": 0,
-  "1": 10px,
-  "2": 20px,
-  "3": 30px,
-);
 
 // base layout classes
 .container {
     width: 100%;
     margin: 0 auto;
-    box-sizing: border-box;
+    // box-sizing: border-box;
 }
 
 .row {

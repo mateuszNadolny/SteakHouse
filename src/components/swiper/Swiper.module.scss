@@ -1,0 +1,20 @@
+@import './../../global_styles/index.scss';
+
+.custom-pagination-div {
+    display: flex;
+    justify-content: center;
+    margin-top: .625rem;
+}
+
+@include laptop {
+    .custom-pagination-div {
+        transform: scale(0.8);
+    }
+}
+
+@include mobile {
+    .custom-pagination-div {
+        margin-top: 1rem;
+        transform: scale(0.5);
+    }
+}

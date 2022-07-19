@@ -1,20 +1,28 @@
 @import './../../global_styles/index.scss';
 
-header {
+.header-main {
     box-shadow: $base-box-shadow;
     font-size: $header-font-size;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: $primary-white;
+    z-index: 10;
 }
+
+.header-hidden {
+    transform: translateY(-100%);
+}
+
+
 
 nav {
     justify-content: space-around;
     align-items: center;
     top: 0;
     left: 0;
-    transition: 1s ease-out;
+    transition: 1s top ease-out;
+    z-index: 10;
 }
 
 .close-icon, .menu-hamburger-icon {
