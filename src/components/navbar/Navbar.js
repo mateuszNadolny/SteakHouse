@@ -10,30 +10,37 @@ import cartIcon from "../../assets/cart.svg"
 import orderIcon from "../../assets/order.svg"
 import menuIcon from "../../assets/menu.svg"
 import closeIcon from "../../assets/close.svg"
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 
 const Navbar = () => {
 
     const [showNav, setShowNav] = useState(true)
     const navbarRef = useRef()
+    let prevScrollY = window.scrollY;
 
-    const prevScrollPos = window.pageYOffset;
-    window.addEventListener('scroll', () => {
-        const currentScrollPos = window.pageYOffset;
-        if (prevScrollPos > currentScrollPos) {
-            setShowNav(true);
+    const handleNavbarVisibility = () => {
+        if (prevScrollY < window.scrollY) {
+            setShowNav(false);
+            console.log("idziem w dol")
         } else {
-            setShowNav(false)
+            setShowNav(true)
+            console.log('idziem w gore')
         }
-        prevScrollPos = currentScrollPos;
-    })
+
+        prevScrollY = window.scrollY;
+        
+    }
+
+   
+    window.addEventListener('scroll', handleNavbarVisibility)
+
 
     const toggleNavbarHandler = () => {
         navbarRef.current.classList.toggle(styles["nav-toggle"])
     }
 
     return ( 
-        <header className={`${styles["header-main"]} ${!showNav ? 'header-hidden' : ''} row col-12-mobile col-12-desktop col-12-laptop`}>
+        <header className={`${styles["header-main"]}  row col-12-mobile col-12-desktop col-12-laptop ${!showNav ? styles["header-hidden"] : ''}`}>
             <div className={`${styles["logo-wrapper"]} row col-1-desktop col-1-laptop col-1-mobile`}>
                 <img src={restaurantLogo} alt="logo" className={styles["logo"]}/>
             </div>

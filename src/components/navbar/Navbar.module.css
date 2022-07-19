@@ -225,9 +225,12 @@ button {
   left: 0;
   background-color: rgb(255, 255, 255);
   z-index: 10;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
 }
 
 .header-hidden {
+  position: absolute;
   transform: translateY(-100%);
 }
 
@@ -236,7 +239,6 @@ nav {
   align-items: center;
   top: 0;
   left: 0;
-  transition: 1s top ease-out;
   z-index: 10;
 }
 
