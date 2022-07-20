@@ -1,10 +1,5 @@
-import { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide }  from 'swiper/react';
-
-
 import "./../../global_styles/index.css";
 import styles from "./LogoCarousel.module.scss";
-import 'swiper/scss';
 
 
 // importing assets
@@ -16,22 +11,10 @@ const boltFood = "https://github.com/mateuszNadolny/SteakHouse/blob/25226a124d18
 
 
 const LogoCarousel = () => {
-    const params = {
-        effect: "slide",
-        // loop: true,
-        autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-          },
-        // modules: [Autoplay],
-        style: {
-            zIndex: 3,
-        },
-    }
+
 
     return ( 
-        <Swiper {...params}>  
-        </Swiper>
+            <img className={styles["logo-image"]} src="https://github.com/mateuszNadolny/SteakHouse/blob/25226a124d18ab2865c008a4bd87b134f2309703/src/assets/pysznepl.png" alt="pyszne.pl logo" />
         
      );
 }
