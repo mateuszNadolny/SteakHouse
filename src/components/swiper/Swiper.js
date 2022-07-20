@@ -20,24 +20,24 @@ const SimpleSwiper = () => {
       modifier: 1,
       slideShadows: true,
     },
+    style: {
+      zIndex: 0,
+    },
+    modules: [Pagination, Autoplay],
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {   
+      el: `.${styles["custom-pagination-div"]}`,
+      clickable: true,
+      renderBullet: (index, className) => {
+      return '<span class="' + className + '"></span>';
+      }, },
   };
 
   return (
-    <Swiper
-      style={{zIndex: 0}}
-      {...params}
-      modules={[Pagination, Autoplay]}
-      pagination={{   
-        el: `.${styles["custom-pagination-div"]}`,
-        clickable: true,
-        renderBullet: (index, className) => {
-        return '<span class="' + className + '"></span>';
-        }, }}
-      autoplay={{  
-        delay: 3000,
-        disableOnInteraction: false}}
-      scrollbar={{ draggable: true }}
-    >
+    <Swiper {...params}>
       <SwiperSlide><Slide/></SwiperSlide>
       <SwiperSlide><Slide/></SwiperSlide>
       <SwiperSlide><Slide/></SwiperSlide>
